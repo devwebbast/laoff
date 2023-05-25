@@ -19,6 +19,7 @@
 
 nav {
   display: flex;
+  max-width: 1500px;
   width: 100%;
   align-items: center;
   justify-content: space-around;
@@ -156,6 +157,20 @@ nav .menu-items .items:hover:active {
   text-transform: none;
 }
 
+/* Responsive Mobile/Tablette */
+@media screen and (max-width: 700px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-logo img {
+    order: 3;
+    width: 90px;
+  }
+  .copyRight {
+    order: 1;
+  }
+}
 main > section {
   padding-top: 200px;
 }
@@ -195,6 +210,14 @@ main > section {
   margin-top: 15px;
 }
 
+/* Responsive Mobile/Tablette */
+@media screen and (max-width: 900px) {
+  .place-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 .lineup-container {
   display: flex;
   flex-wrap: wrap;
@@ -209,7 +232,7 @@ main > section {
   padding: 30px;
 }
 .lineup-img img {
-  max-width: 550px;
+  max-width: 450px;
   width: 100%;
 }
 .lineup-img h4 {
@@ -237,7 +260,6 @@ main > section {
   font-family: "Barlow Condensed", sans-serif;
   color: #F91E52;
   font-size: 60px;
-  line-height: 60px;
   font-weight: 700;
   letter-spacing: 0px;
 }
@@ -254,11 +276,18 @@ main > section {
   margin-top: 70px;
 }
 
+/* Responsive Mobile/Tablette */
+@media screen and (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 .container-faq {
   color: #FFFFFF;
   width: 70%;
   max-width: 900px;
-  min-width: 700px;
   height: auto;
   margin: 10px auto 0;
   display: flex;
@@ -279,8 +308,6 @@ main > section {
   background-color: #1E012C;
   border-radius: 10px;
   border: 1px solid #F91E52;
-  position: relative;
-  z-index: 100;
 }
 .container-faq .visible-question h2 {
   margin-left: 10px;
@@ -310,9 +337,16 @@ main > section {
   padding-bottom: 150px;
 }
 
+* {
+  outline: 1px solid red;
+}
+
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   background: #1E012C;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
@@ -342,6 +376,13 @@ a {
 }
 .btn:hover {
   transform: scale(1.05);
+}
+
+/* Responsive Mobile/Tablette */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

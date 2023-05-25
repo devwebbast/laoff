@@ -8,9 +8,15 @@
 @import 'faq.scss';
 @import 'ticketing.scss';
 
+*{
+    outline: 1px solid red;
+}
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
     background: $primary;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 h1 {
     color: $secondary;
@@ -38,4 +44,12 @@ a {
     &:hover {
         transform: scale(1.05);
     }
+}
+
+/* Responsive Mobile/Tablette */
+@media #{$small}{
+    h1 {
+        font-size: 60px;
+    }
+
 }

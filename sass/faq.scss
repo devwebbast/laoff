@@ -2,7 +2,6 @@
     color: $tertiary;
     width: 70%;
     max-width: 900px;
-    min-width: 700px;
     height: auto;
     margin: 10px auto 0;
     display: flex;
@@ -24,8 +23,7 @@
         background-color: $primary;
         border-radius: 10px;
         border: 1px solid $secondary;
-        position: relative;
-        z-index: 100;
+
         
 
         h2 {

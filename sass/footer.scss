@@ -40,3 +40,19 @@
         text-transform: none;
     }
 }
+
+/* Responsive Mobile/Tablette */
+@media #{$small-down}{
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-logo img {
+        order: 3;
+        width: 90px;
+    }
+    .copyRight {
+        order: 1;
+    }
+
+}
