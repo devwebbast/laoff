@@ -1,2 +1,5 @@
 dart-sass/
 images/
+.vscode/
+package-lock.json
+package.json

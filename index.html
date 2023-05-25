@@ -4,10 +4,159 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="/CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,400;0,500;0,600;0,700;1,800&family=Barlow:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
     <title>La OFF - Ready To Share - Ready To Dance</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a class="logo">
+                <img src="/images/logo-t.png">
+            </a>
+            <div class="menu-nav">
+                <button class="hamburger" type="button" aria-label="Toggle Navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="menu-items">
+                    <a class="items" href="#lineUp" class="active">Line UP</a>
+                    <a class="items" href="#aboutOff">La Off</a>
+                    <a class="items" href="#placeParty">L'octave</a>
+                    <a class="items" href="#faq">Infos pratiques</a>
+                    <a class="items"href="#takeTicket">
+                        <button class="btn">Prends ton billet</button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="lineUp" id="lineUp">
+            <h1>Line Up</h1>
+            <div class="lineup-container">
+                <div class="lineup-img">
+                    <img src="images/img1.png">
+                    <h4>DISTILLED NOISE</h4>
+                </div>
+                <div class="lineup-img">
+                    <img src="images/img2.png">
+                    <h4>LEGRI</h4>
+                </div>
+                <div class="lineup-img">
+                    <img src="images/img3.png">
+                    <h4>CERTET</h4>
+                </div>
+                <div class="lineup-img">
+                    <img src="images/img4.png">
+                    <h4>ARTUR</h4>
+                </div>
+            </div>
+        </section>
+        <section class="aboutOff" id="about">
+            <h1>La Off</h1>
+            <div class="about-container">
+                <div class="about-title">
+                    <h3><span>READY TO SHARE</span>
+                        <br>
+                        <span>READY TO DANCE !</span>
+                    </h3>
+                </div>
+                <div class="about-description">
+                    <p>Depuis 2021, LA OFF est une association musicale à but non lucratif qui organise des évènements sur la Côte d’Azur.</p>
+                    <p>Notre ambition : vous faire partager notre passion pour la musique House et Minimal grâce à des artistes locaux et internationaux aux styles musicaux éclectiques. </p>              
+                    <p><span>LA OFF</span></p>
+                    <button class="btn"><a href="#takeTicket">Prends ton billet</a></button>   
+                </div>
+            </div>
+        </section>
+        <section id="placeParty">
+            <h1>L'Octave</h1>
+            <div class="place-container">
+                <div class="place-img">
+                    <img src="/images/octave.jpg">
+                </div>
+                <div class="place-description">
+                    <h4>TAPAS - LIVE MUSIC - ROOFTOP</h4>
+                    <p>LA OFF reprend possession de L'Octave, situé à 2 pas de la place Garibaldi. Système son pensé pour l'évènement, drinks et tapas à partager.</p>
+                </div>
+            </div>
+        </section>
+        <section class="infos-container" id="#faq">
+            <h1>Infos pratiques</h1>
+            <div class="container-faq">
+                <div class="questions">
+                    <div class="visible-question">
+                        <h2>Comment se rendre à L’Octave ?</h2>
+                        <img src="images/plus-solid.svg" alt="animation plus">
+                    </div>
+                    <div class="hidden-answer">
+                        <p>64 boulevard Risso, 06300 Nice Arrêts de tram : Garibaldi ou Garibaldi / Le Château</p>
+                    </div>
+                </div>
+                <div class="questions">
+                    <div class="visible-question">
+                        <h2>Y a-t-il des places de stationnement ?</h2>
+                        <img src="images/plus-solid.svg" alt="animation plus">
+                    </div>
+                    <div class="hidden-answer">
+                        <p>Le parking "Promenade des Arts" se trouve à 2 minutes à pied de L'Octave.</p>
+                    </div>
+                </div>
+                <div class="questions">
+                    <div class="visible-question">
+                        <h2>Y a-t-il un vestiaire ?</h2>
+                        <img src="images/plus-solid.svg" alt="animation plus">
+                    </div>
+                    <div class="hidden-answer">
+                        <p>Non, il n'y a pas de vestiaire.</p>
+                    </div>
+                </div>
+                <div class="questions">
+                    <div class="visible-question">
+                        <h2>Peut-on acheter son billet sur place ?</h2>
+                        <img src="images/plus-solid.svg" alt="animation plus">
+                    </div>
+                    <div class="hidden-answer">
+                        <p>On te conseille de prendre ta prévente pour être sûr d'avoir une place ! Sinon pour les étudiants, c'est 9€ (sous présentation d'un justificatif à l'entrée), les regulars sont à 13€ et sur place, ça sera 15€.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ticketing" id="takeTicket">
+            <h1>Billeterie</h1>
+            <div>
+                <!-- Intégrer le widget wizEvent -->
+                <p>Ici le system de billeterie</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-logo">
+            <a class="logo">
+                <img src="/images/logo-t.png">
+            </a>
+        </div>
+        <div class="copyRight">
+            <h3>© 2023 La OFF - Ready To Share - Ready To Dance  <span class="sign">by B@st</span></h3>
+        </div>
+        <div class="socialNetworks">
+            <div>
+                <h2>Nos Réseaux</h2>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/LaOFFevent" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/laoff_event/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@la_off" target="_blank"><i class="fa fa-youtube"></i></a>
+                <a href="https://soundcloud.com/user-307170028" target="_blank"><i class="fa fa-soundcloud"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>

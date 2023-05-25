@@ -1,0 +1,41 @@
+@import 'libs/reset.scss';
+@import 'navbar.scss';
+@import 'footer.scss';
+@import 'main.scss';
+@import 'partyplace.scss';
+@import 'lineup.scss';
+@import 'about.scss';
+@import 'faq.scss';
+@import 'ticketing.scss';
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background: $primary;
+}
+h1 {
+    color: $secondary;
+    font-family: 'Barlow Condensed', sans-serif; 
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 100px;
+}
+a {
+    text-decoration: none;
+    color: $tertiary;
+}
+
+.btn {
+    color: $tertiary;
+    font-family: 'Barlow Condensed', sans-serif; ;
+    background-color: $secondary;
+    border: 1px solid $secondary;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
