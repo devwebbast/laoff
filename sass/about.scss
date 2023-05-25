@@ -10,7 +10,7 @@
     .about-title, .about-description {
         max-width: 550px;
         width: 100%;
-        padding-top: 110px;
+        padding-top: 50px;
     }
 
     .about-title h3 {
@@ -23,7 +23,7 @@
 
     .about-description {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         line-height: 40px;
         font-size: 18px;
 
@@ -31,18 +31,83 @@
             font-weight: bold;
         }
         button {
-            margin-top: 70px;
+            margin-top: 20px;
+            width: 30%;
         }
     }
 
 }
 
-/* Responsive Mobile/Tablette */
-@media #{$medium-up}{
+//Responsive tablette
+@media #{$medium}{
     .about-container {
-        flex-direction: column;
+        width: 90%;
+        margin: auto;
         align-items: center;
-        text-align: center;
+        gap: 20px;
 
+        .about-title {
+            padding: 0;
+            margin-top: 20px;
+
+            h3 {
+                font-size: 50px;
+            }
+        }
+        
+        .about-description {
+            padding: 0;
+            margin-top: 40px;
+            p {
+                font-size: 1rem;
+            }
+            button {
+                width: 50%;
+                font-size: 15px;
+            }
+        }
+    }
+
+
+
+}
+
+// Responsive mobile
+@media #{$small}{
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+
+        .about-title {
+            width: 90%;
+            padding-top: 10px;
+            margin: auto;
+
+            
+            h3{
+                margin-top: 20px;
+                font-size: 32px;
+                text-align: center;
+                
+            }
+        }
+
+        .about-description{
+            padding-top: 20px;
+            width: 90%;
+            margin: auto;
+            p {
+                font-size: 16px;
+                line-height: 2.5rem;
+                text-align: left;
+            }
+            button {
+                margin: 10px auto;
+                width: 50%;
+                font-size: 1rem;                
+            }
+        }
     }
 }

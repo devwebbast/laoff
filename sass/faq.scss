@@ -1,53 +1,126 @@
+.infos-container {
+  padding-top: 50px;
+}
 .container-faq {
-    color: $tertiary;
-    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 4rem;
     max-width: 900px;
-    height: auto;
-    margin: 10px auto 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 60px;
-
-    .questions {
-        width: 100%;
-        height: auto;
-        margin: 5px;
+    width: 100%;
+}
+.accordion {
+    .accordion-item {
+      border-bottom: 1px solid $secondary;
+      button[aria-expanded='true'] {
+        border-bottom: 1px solid $secondary;
+      }
     }
-
-    .visible-question {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $primary;
-        border-radius: 10px;
-        border: 1px solid $secondary;
-
-        
-
-        h2 {
-            margin-left: 10px;
-            padding: 15px 5px;
-            font-size: 25px;
-            text-decoration: underline;
+    button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em 0;
+      color: $tertiary;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+      &:hover, &:focus {
+        cursor: pointer;
+        color: $secondary;
+        &::after {
+          cursor: pointer;
+          color: $secondary;
+          border: 1px solid $secondary;
         }
-
-        img {
-            margin-right: 10px;
-            width: 25px;
-            cursor: pointer;
+      }
+      .accordion-title {
+        padding: 1em 1.5em 1em 0;
+      }
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 22px;
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
         }
+        &::after {
+          display: block;
+          position: absolute;
+          content: '';
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+        }
+      }
     }
-
-    .hidden-answer {
-        padding: 0px 15px;
-        height: 0px;
-        opacity: 0;
-
-        p {
-            line-height: 1.5;
-            font-size: 18px;
+    button[aria-expanded='true'] {
+      color: $secondary;
+      .icon {
+        &::after {
+          width: 0;
         }
+      }
+      + .accordion-content {
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+      }
     }
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+      p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin: 2em 0;
+        color: $tertiary;
+      }
+    }
+  }
+
+
+// Responsive tablette
+@media #{$medium}{
+
+}
+// Responsive mobile
+@media #{$small}{
+  .infos-container {
+    padding-top: 40px;
+  }
+  .container-faq{
+    padding: 0;
+    margin-top: 20px;
+    max-width: 300px;
+    width: 90%;
+
+    .accordion-title {
+      font-size: 1rem;
+    }
+    .accordion-content {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
 }

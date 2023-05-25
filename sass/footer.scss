@@ -41,18 +41,25 @@
     }
 }
 
-/* Responsive Mobile/Tablette */
-@media #{$small-down}{
+
+// Responsive mobile
+@media #{$small}{
     .footer {
-        display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        padding: 0;
     }
-    .footer-logo img {
+    .footer-logo {
         order: 3;
-        width: 90px;
+        margin: 0;
     }
-    .copyRight {
-        order: 1;
+    .socialNetworks {
+        order: 2;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        h2 {
+            display: none;
+        }
     }
 
 }

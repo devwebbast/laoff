@@ -1,7 +1,44 @@
-.ticketing {
-    text-align: center;
-    font-size: 42px;
-    color: $tertiary;
-    padding-bottom: 150px;
+.ticketing{
+    padding-top: 50px;
+    
+    h1{
+        padding: 10px;
+    }
+}
+.widgetEvent {
+    max-width: 700px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+// Responsive tablette
+@media #{$medium}{
+    .ticketing{
+        padding-top: 0px;
+        margin-bottom: 20px;
+        h1 {
+            padding: 20px;
+        }
+    }
+    .widgetEvent{
+        width: 60%;
+        
+    }
+
+    
+}
+// Responsive mobile
+@media #{$small}{
+    .ticketing{
+        padding-top: 0px;
+        margin-bottom: 20px;
+        h1 {
+            padding: 20px;
+        }
+    }
+    .widgetEvent{
+        width: 80%;       
+    }
+
 }
 

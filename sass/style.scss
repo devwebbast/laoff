@@ -21,9 +21,11 @@ h1 {
     font-family: 'Barlow Condensed', sans-serif; 
     text-transform: uppercase;
     font-weight: bold;
-    text-align: center;
     font-size: 100px;
+    text-align: center;
 }
+
+
 a {
     text-decoration: none;
     color: $tertiary;
@@ -44,10 +46,14 @@ a {
     }
 }
 
-/* Responsive Mobile/Tablette */
-@media #{$small}{
+@media #{$medium}{
     h1 {
         font-size: 60px;
     }
+}
 
+@media #{$small}{
+    h1 {
+        font-size: 50px;
+    }
 }

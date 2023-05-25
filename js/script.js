@@ -1,42 +1,34 @@
-const hamburgerToggler = document.querySelector('.hamburger')
-const menuItems = document.querySelector('.menu-items')
+// Navbar Responsive
+const menuHamburger = document.querySelector(".menu-hamburger");
+const navLinks = document.querySelector(".nav-links");
+const navLinksItems = document.querySelectorAll(".nav-links ul li");
 
-const toggleNav = () => { //Event
-  hamburgerToggler.classList.toggle('open')
+menuHamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('mobile-menu');
+});
 
-  const ariaToggle = hamburgerToggler.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-  hamburgerToggler.setAttribute('aria-expanded', ariaToggle)
-  menuItems.classList.toggle('open')
-}
-hamburgerToggler.addEventListener('click', toggleNav)
-
-// Resize 
-new ResizeObserver(entries => {
-  if(entries[0].contentRect.width <= 768) {
-    menuItems.style.transition = "transform 0.3s ease-out"
-  }else {
-    menuItems.style.transition = "none"
-  }
-}).observe(document.body)
-
+navLinksItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('mobile-menu');
+  });
+});
 
 // FAQ
-const allIcon = document.querySelectorAll('.visible-question img')
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
 
 
-allIcon.forEach(icon => {
-  icon.addEventListener('click', function() {
-    
-    const height = this.parentNode.parentNode.childNodes[3].scrollHeight
-    const currentQuestions = this.parentNode.parentNode.childNodes[3]
-
-    if(this.src.includes('plus')) {
-      this.src = './images/minus-solid.svg'
-      gsap.to(currentQuestions, {duration: 0.2, height: height + 40, opacity: 1, padding: '20px 15px'})
-    }else if(this.src.includes('minus')) {
-      this.src = './images/plus-solid.svg'
-      gsap.to(currentQuestions, {duration: 0.2, height: 0, opacity: 0, padding: '0px 15px'})
-    }
-  })
-})
 
