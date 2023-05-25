@@ -337,10 +337,6 @@ main > section {
   padding-bottom: 150px;
 }
 
-* {
-  outline: 1px solid red;
-}
-
 body {
   font-family: "Barlow Condensed", sans-serif;
   background: #1E012C;
