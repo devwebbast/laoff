@@ -442,8 +442,9 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 45%;
-    font-size: 15px;
+    max-width: 200px;
+    width: 100%;
+    font-size: 14px;
   }
 }
 .infos-container {
@@ -638,8 +639,8 @@
     width: 100%;
   }
   .timer-style {
-    padding: 35px;
-    height: 70px;
+    padding: 32px;
+    height: 60px;
     margin: 2px;
     width: 40px;
   }

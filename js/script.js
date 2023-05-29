@@ -2,6 +2,7 @@
 const menuHamburger = document.querySelector(".menu-hamburger");
 const navLinks = document.querySelector(".nav-links");
 const navLinksItems = document.querySelectorAll(".nav-links ul li");
+const closeButton = document.querySelector(".btnTicket");
 
 menuHamburger.addEventListener('click', () => {
   navLinks.classList.toggle('mobile-menu');
@@ -11,6 +12,9 @@ navLinksItems.forEach((item) => {
   item.addEventListener('click', () => {
     navLinks.classList.remove('mobile-menu');
   });
+});
+closeButton.addEventListener('click', () => { // Ajoutez un gestionnaire d'événements au bouton de fermeture
+  navLinks.classList.remove('mobile-menu');
 });
 
 // FAQ
