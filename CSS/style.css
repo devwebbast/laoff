@@ -566,7 +566,7 @@
     font-size: 13px;
   }
   .container-faq .accordion-content p {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 .ticketing {
@@ -664,12 +664,11 @@
 }
 
 .mention-legales {
-  max-width: 400px;
   width: 100%;
   margin-top: 10px;
 }
-.mention-legales a {
-  margin-left: 20px;
+.mention-legales i {
+  padding: 20px;
 }
 .mention-legales h1 {
   font-size: 50px;
@@ -692,6 +691,12 @@
   text-align: justify;
 }
 
+@media screen and (max-width: 768px) {
+  .mention-legales {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 body {
   font-family: "Barlow Condensed", sans-serif;
   background: #1E012C;

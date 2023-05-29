@@ -1,9 +1,9 @@
-.mention-legales {
-    max-width: 400px;
+.mention-legales{
     width: 100%;
     margin-top: 10px;
-    a {
-        margin-left: 20px;
+
+    i {
+        padding: 20px;
     }
     h1 {
         font-size: 50px;
@@ -29,4 +29,13 @@
         margin-right: 10px;
         text-align: justify;
     }
+
 }
+
+@media #{$small}{
+    .mention-legales {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
