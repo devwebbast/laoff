@@ -1,0 +1,47 @@
+.timer-element {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .timer-style {
+    display: flex;
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $secondary;
+    border-radius: 50%;
+    padding: 60px;
+    box-shadow: 1px 1px 5px 1px $primary;
+    background: transparent;
+    color: $tertiary;
+    text-transform: uppercase;
+  }
+
+  @media #{$small}{
+    .timer {
+      justify-content: center;
+      padding-right: 0;
+      padding-left: 0;
+      width: 100%;
+    }
+    .timer-style{
+      padding: 35px;
+      height: 70px;
+      margin: 2px;
+      width: 40px;
+    }
+
+    .timer-element{
+      font-size: 15px;
+    }
+  }

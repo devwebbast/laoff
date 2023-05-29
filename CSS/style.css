@@ -11,17 +11,20 @@
 /* FONTS */
 .logo {
   max-width: 150px;
-  width: 100%;
-  height: 150px;
 }
 .logo img {
-  width: 150px;
+  width: 100px;
+}
+
+.line {
+  display: none;
 }
 
 .navbar {
   display: flex;
   max-width: 1500px;
   width: 100%;
+  height: 60px;
   align-items: center;
   justify-content: space-around;
   font-weight: 700;
@@ -30,6 +33,13 @@
   color: #FFFFFF;
   box-shadow: inset 0px -1px 0px #F91E52;
   z-index: 10;
+}
+.navbar .nav-links {
+  display: flex;
+}
+.navbar .nav-links .btnTicket {
+  width: 150px;
+  padding: 5px;
 }
 .navbar .nav-links ul {
   display: flex;
@@ -54,6 +64,9 @@
 .navbar .langChoice {
   display: none;
 }
+.navbar .line-nav {
+  display: none;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 820px) {
@@ -67,6 +80,12 @@
   }
   .navbar .logo {
     order: 2;
+  }
+  .navbar .line-nav {
+    margin-top: 15px;
+    display: block;
+    border: 1px solid #402949;
+    width: 100%;
   }
   .navbar .menu-hamburger {
     order: 3;
@@ -84,12 +103,17 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: 900;
+  }
+  .navbar .nav-links .btnTicket {
+    height: 40px;
+    padding: 0;
   }
   .mobile-menu {
     transform: translateX(0%);
@@ -101,7 +125,7 @@
     align-items: center;
   }
   .navbar .nav-links ul li {
-    margin: 25px 0;
+    margin: 10px 0;
     font-size: 1.2em;
   }
 }
@@ -152,23 +176,36 @@
   .footer-logo {
     order: 3;
     margin: 0;
+    height: 80px;
   }
   .socialNetworks {
     order: 2;
+    display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    margin-bottom: 10px;
   }
   .socialNetworks h2 {
     display: none;
   }
+  .copyRight {
+    order: 1;
+  }
+  .mentions {
+    width: 100%;
+    font-size: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+  }
 }
-main > section {
-  padding-top: 200px;
-}
-
 .place-section {
   padding-top: 50px;
+  background: url(/images/sectionbg1.png);
+  background-position: center;
+  padding-bottom: 50px;
 }
 
 .place-container {
@@ -225,26 +262,39 @@ main > section {
 }
 @media screen and (max-width: 768px) {
   .place-section {
-    padding-top: 40px;
+    padding-top: 0;
+    margin-top: 50px;
   }
   .place-section .place-container {
     flex-direction: column;
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-top: 0;
   }
-  .place-section .place-container .place-img {
-    margin-top: 20px;
+  .place-section .place-container .place-img img {
+    max-width: 320px;
+    width: 100%;
+    margin-top: 30px;
   }
   .place-section .place-container .place-description {
-    display: block;
     padding: 0;
-    text-align: start;
+    margin: auto;
   }
   .place-section .place-container .place-description h4 {
     text-align: start;
-    font-size: 35px;
+    font-size: 25px;
+  }
+  .place-section .place-container .place-description p {
+    line-height: 22px;
+    font-size: 14px;
+    margin-top: 0;
   }
 }
+.lineUp {
+  margin-top: 100px;
+}
+
 .lineup-container {
   display: flex;
   flex-wrap: wrap;
@@ -259,7 +309,7 @@ main > section {
   padding: 30px;
 }
 .lineup-img img {
-  max-width: 450px;
+  max-width: 550px;
   width: 100%;
 }
 .lineup-img h4 {
@@ -286,13 +336,18 @@ main > section {
   }
 }
 @media screen and (max-width: 768px) {
-  .lineup-img h4 {
-    font-size: 20px;
-    padding: 10px;
+  .lineUp {
+    margin-top: 50px;
   }
-  img {
-    max-width: 350px;
-    width: 100%;
+  .lineup-img {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+  .lineup-img h4 {
+    font-size: 25px;
+    padding: 30px;
+    line-height: 0;
   }
 }
 .aboutOff {
@@ -319,7 +374,6 @@ main > section {
 .about-container .about-description {
   display: flex;
   flex-direction: column;
-  line-height: 40px;
   font-size: 18px;
 }
 .about-container .about-description span {
@@ -357,36 +411,39 @@ main > section {
   }
 }
 @media screen and (max-width: 768px) {
+  .aboutOff {
+    padding-top: 0;
+  }
   .about-container {
     display: flex;
     flex-direction: column;
-    text-align: center;
     margin: auto;
+    padding-left: 33px;
+    padding-right: 33px;
   }
   .about-container .about-title {
     width: 90%;
-    padding-top: 10px;
-    margin: auto;
+    padding-top: 0;
   }
   .about-container .about-title h3 {
     margin-top: 20px;
     font-size: 32px;
-    text-align: center;
+    text-align: start;
+    margin-left: 16px;
   }
   .about-container .about-description {
     padding-top: 20px;
     width: 90%;
     margin: auto;
-  }
-  .about-container .about-description p {
-    font-size: 16px;
-    line-height: 2.5rem;
-    text-align: left;
+    font-size: 15px;
+    text-align: start;
   }
   .about-container .about-description button {
-    margin: 10px auto;
-    width: 50%;
-    font-size: 1rem;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+    font-size: 15px;
   }
 }
 .infos-container {
@@ -489,19 +546,26 @@ main > section {
 
 @media screen and (max-width: 768px) {
   .infos-container {
-    padding-top: 40px;
+    margin: auto;
+  }
+  .infos-container h2 {
+    font-size: 60px;
+    text-align: center;
+    padding: 15px;
   }
   .container-faq {
     padding: 0;
-    margin-top: 20px;
     max-width: 300px;
     width: 90%;
   }
+  .container-faq button .icon {
+    border: none;
+  }
   .container-faq .accordion-title {
-    font-size: 1rem;
+    font-size: 13px;
   }
   .container-faq .accordion-content p {
-    font-size: 1rem;
+    font-size: 12px;
   }
 }
 .ticketing {
@@ -531,16 +595,102 @@ main > section {
 }
 @media screen and (max-width: 768px) {
   .ticketing {
-    padding-top: 0px;
     margin-bottom: 20px;
-  }
-  .ticketing h1 {
-    padding: 20px;
   }
   .widgetEvent {
     width: 80%;
   }
 }
+.timer-element {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.timer-style {
+  display: flex;
+  max-width: 100px;
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #F91E52;
+  border-radius: 50%;
+  padding: 60px;
+  box-shadow: 1px 1px 5px 1px #1E012C;
+  background: transparent;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .timer {
+    justify-content: center;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+  .timer-style {
+    padding: 35px;
+    height: 70px;
+    margin: 2px;
+    width: 40px;
+  }
+  .timer-element {
+    font-size: 15px;
+  }
+}
+.banner img {
+  max-width: 1500px;
+  width: 100%;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  gap: 30px;
+}
+
+.mention-legales {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 10px;
+}
+.mention-legales a {
+  margin-left: 20px;
+}
+.mention-legales h1 {
+  font-size: 50px;
+  padding-top: 20px;
+}
+.mention-legales h4, .mention-legales p, .mention-legales h5 {
+  color: #FFFFFF;
+}
+.mention-legales h4 {
+  text-align: center;
+  padding: 20px;
+}
+.mention-legales h5 {
+  text-decoration: underline;
+  text-align: center;
+}
+.mention-legales p {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: justify;
+}
+
 body {
   font-family: "Barlow Condensed", sans-serif;
   background: #1E012C;
@@ -549,7 +699,7 @@ body {
   margin-right: auto;
 }
 
-h1 {
+h1, h2 {
   color: #F91E52;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
@@ -578,6 +728,12 @@ a {
   transform: scale(1.05);
 }
 
+.line {
+  display: block;
+  border: 1px solid #402949;
+  width: 100%;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   h1 {
     font-size: 60px;
@@ -585,7 +741,12 @@ a {
 }
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 50px;
+    font-size: 60px;
+  }
+  .line {
+    display: block;
+    border: 1px solid #402949;
+    width: 100%;
   }
 }
 

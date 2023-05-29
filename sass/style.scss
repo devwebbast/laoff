@@ -1,13 +1,18 @@
 @import 'libs/reset.scss';
 @import 'navbar.scss';
 @import 'footer.scss';
-@import 'main.scss';
 @import 'partyplace.scss';
 @import 'lineup.scss';
 @import 'about.scss';
 @import 'faq.scss';
 @import 'ticketing.scss';
-
+@import 'timer.scss';
+@import 'banner.scss';
+@import 'mentions.scss';
+ 
+// *{
+//     outline: 1px solid red;
+// }
 
 body {
     font-family: 'Barlow Condensed', sans-serif;
@@ -16,7 +21,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-h1 {
+h1, h2 {
     color: $secondary;
     font-family: 'Barlow Condensed', sans-serif; 
     text-transform: uppercase;
@@ -46,6 +51,12 @@ a {
     }
 }
 
+.line {
+    display: block;
+    border: 1px solid #402949;
+    width: 100%;
+}
+
 @media #{$medium}{
     h1 {
         font-size: 60px;
@@ -54,6 +65,11 @@ a {
 
 @media #{$small}{
     h1 {
-        font-size: 50px;
+        font-size: 60px;
+    }
+    .line {
+        display: block;
+        border: 1px solid #402949;
+        width: 100%;
     }
 }

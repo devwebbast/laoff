@@ -1,0 +1,21 @@
+.banner img {
+    max-width: 1500px;
+    width: 100%;
+
+
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    gap: 30px;
+    
+
+}
+
+@media #{$small}{
+
+}

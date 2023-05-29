@@ -106,20 +106,29 @@
 // Responsive mobile
 @media #{$small}{
   .infos-container {
-    padding-top: 40px;
+    margin: auto;
+
+    h2 {
+      font-size: 60px;
+      text-align: center;
+      padding: 15px;
+    }
   }
   .container-faq{
     padding: 0;
-    margin-top: 20px;
     max-width: 300px;
     width: 90%;
 
+    button .icon {
+      border: none;
+    }
+
     .accordion-title {
-      font-size: 1rem;
+      font-size: 13px;
     }
     .accordion-content {
       p {
-        font-size: 1rem;
+        font-size: 12px;
       }
     }
   }

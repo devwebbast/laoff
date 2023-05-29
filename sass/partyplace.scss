@@ -1,5 +1,8 @@
 .place-section {
     padding-top: 50px;
+    background: url(/images/sectionbg1.png);
+    background-position: center;
+    padding-bottom: 50px;
 }
 
 .place-container{
@@ -7,7 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     img {
         max-width: 550px;
         width: 100%;
@@ -66,24 +69,34 @@
 // Responsive mobile
 @media #{$small}{
     .place-section {
-        padding-top: 40px;
+        padding-top: 0;
+        margin-top: 50px;
 
         .place-container {
             flex-direction: column;
-            width: 90%;
-            margin: auto;
+            width: 100%;
+            padding-left: 33px;
+            padding-right: 33px;
+            margin-top: 0;
 
-            .place-img {
-                margin-top: 20px;
+            .place-img img {
+                max-width: 320px;
+                width: 100%;
+                margin-top: 30px;
             }
 
             .place-description{
-                display: block;
                 padding: 0;
-                text-align: start;
+                margin: auto;
                 h4 {
                     text-align: start;
-                    font-size: 35px;
+                    font-size: 25px;
+                }
+                p {
+                    line-height: 22px;
+                    font-size: 14px;
+                    margin-top: 0;
+
                 }
             }
         }

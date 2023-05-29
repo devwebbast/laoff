@@ -23,18 +23,13 @@
     .widgetEvent{
         width: 60%;
         
-    }
-
-    
+    }    
 }
 // Responsive mobile
 @media #{$small}{
     .ticketing{
-        padding-top: 0px;
         margin-bottom: 20px;
-        h1 {
-            padding: 20px;
-        }
+
     }
     .widgetEvent{
         width: 80%;       

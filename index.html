@@ -15,13 +15,15 @@
     <nav class="navbar">
         <a href="index.html"class="logo"><img src="/images/logo-t.png"></a>
         <div class="nav-links">
-            <ul>
-                <li><a href="#lineUp">Line UP</a></li>
-                <li><a href="#placeParty">L'octave</a></li>
-                <li><a href="#about">La Off</a></li>
-                <li><a href="#foire">Infos pratiques</a></li>
-                <li><a href="#takeTicket"><button class="btn">Prends ton billet</button></a></li>
+            <ul> 
+                <li><a href="#lineUp" class="link">Line UP</a></li>
+                <li><a href="#placeParty" class="link">L'octave</a></li>
+                <li><a href="#about" class="link">La Off</a></li>
+                <li><a href="#foire" class="link">Infos pratiques</a></li>
+                <div class="line-nav"></div>
             </ul>
+            <div class="line-nav"></div>
+            <div><a href="#takeTicket" class="btnTicket1"><button class="btn btnTicket">Prends ton billet</button></a></div>
         </div>
         <img src="images/bars-solid.svg" alt="icone menu image" class="menu-hamburger">
         <div class="langChoice">
@@ -29,12 +31,31 @@
         </div>
     </nav>
     <header>
-        ICI un CAROUSSEL
     </header>
     <main>
+        <div class="banner">
+            <img src="/images/bannerimg.jpg">
+            <div class="banner-content">
+                <div class="timer">
+                    <div class="timer-element timer-style">
+                      <span id="jours">00</span> <span>jours</span> 
+                    </div>
+                    <div class="timer-element timer-style">
+                       <span id="heures">00</span> heures
+                    </div>
+                    <div class="timer-element timer-style">
+                       <span id="minutes">00</span> minutes
+                    </div>
+                    <div class="timer-element timer-style">
+                       <span id="secondes">00</span> secondes
+                    </div>
+                </div>
+                <button class="btn"><a href="#takeTicket">Prends ton billet</a></button>
+            </div>    
+        </div>
         <section class="lineUp" id="lineUp">
-            <h1>Line Up</h1>
             <div class="line"></div>
+            <h1>Line Up</h1>
             <div class="lineup-container">
                 <div class="lineup-img">
                     <img src="images/img1.png">
@@ -55,8 +76,8 @@
             </div>
         </section>
         <section id="placeParty" class="place-section">
-            <h1>L'Octave</h1>
             <div class="line"></div>
+            <h1>L'Octave</h1>
             <div class="place-container">
                 <div class="place-img">
                     <img src="/images/octave.jpg">
@@ -68,8 +89,8 @@
             </div>
         </section>
         <section class="aboutOff" id="about">
-            <h1>La Off</h1>
             <div class="line"></div>
+            <h1>La Off</h1>
             <div class="about-container">
                 <div class="about-title">
                     <h3><span>READY TO SHARE</span>
@@ -78,16 +99,16 @@
                     </h3>
                 </div>
                 <div class="about-description">
-                    <p>Depuis 2021, LA OFF est une association musicale à but non lucratif qui organise des évènements sur la Côte d’Azur.</p>
-                    <p>Notre ambition : vous faire partager notre passion pour la musique House et Minimal grâce à des artistes locaux et internationaux aux styles musicaux éclectiques. </p>              
-                    <p><span>LA OFF</span></p>
+                    <div><p>Depuis 2021, LA OFF est une association musicale à but non lucratif qui organise des évènements sur la Côte d’Azur.</p></div><br>
+                    <div><p>Notre ambition : vous faire partager notre passion pour la musique House et Minimal grâce à des artistes locaux et internationaux aux styles musicaux éclectiques. </p></div> <br>             
+                    <div><p><span>LA OFF</span></p></div>
                     <button class="btn"><a href="#takeTicket">Prends ton billet</a></button>   
                 </div>
             </div>
         </section>
         <section class="infos-container" id="#faq">
-            <div class="bigtitle"><h1>Infos pratiques</h1></div>
             <div class="line"></div>
+            <h2>Infos pratiques</h2>
             <div class="container-faq">
                 <div class="accordion">
                     <div class="accordion-item">
@@ -118,8 +139,8 @@
             </div>
         </section>
         <section class="ticketing" id="takeTicket">
-            <h1>Billeterie</h1>
             <div class="line"></div>
+            <h1>Billeterie</h1>
             <div class="widgetEvent">
                 <a title="Logiciel billetterie en ligne"
                 href="https://weezevent.com/?c=sys_widget"
@@ -145,17 +166,19 @@
             </a>
         </div>
         <div class="copyRight">
-            <h3>© 2023 La OFF - Ready To Share - Ready To Dance  <span class="sign">by B@st</span></h3>
+            <h3>© 2023 La OFF - Ready To Share - Ready To Dance</h3>
         </div>
         <div class="socialNetworks">
             <div>
-                <h2>Nos Réseaux</h2>
-            </div>
-            <div>
-                <a href="https://www.facebook.com/LaOFFevent" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a href="https://www.instagram.com/laoff_event/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@la_off" target="_blank"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.instagram.com/laoff_event/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <a href="https://soundcloud.com/user-307170028" target="_blank"><i class="fa fa-soundcloud"></i></a>
+                <a href="https://www.facebook.com/LaOFFevent" target="_blank"><i class="fa fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="mentions">
+            <div class="mentions">
+                <a href="mentions.html">| Mentions légales |</a>
             </div>
         </div>
     </footer>
