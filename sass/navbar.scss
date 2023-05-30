@@ -25,13 +25,8 @@
     box-shadow: inset 0px -1px 0px $secondary;
     z-index: 10;
 
-    .nav-links {
-      display: flex;
-
-      .btnTicket {
-        width: 150px;
-        padding: 5px;
-      }
+    .btnFirst {
+      display: none;
     }
 
     .nav-links ul {
@@ -52,6 +47,9 @@
                 
             }
 
+        }
+        .btnLarge:hover{
+          color: $tertiary;
         }
     }
 
@@ -84,9 +82,9 @@
 
       .line-nav {
         margin-top: 15px;
-        display: block;
-        border: 1px solid #402949;
-        width: 100%;
+    display: block;
+    border: 1px solid #402949;
+    width: 100%;
       }
 
 
@@ -113,27 +111,28 @@
       align-items: center;
       transform: translateX(100%);
       opacity: 0;
-      transition: transform 0.5s ease, opacity 0.5s ease;
       z-index: 900;
 
+      .btnFirst{
+        display: block;
+        order: 1;
+      }
     }
 
-    .navbar .nav-links .btnTicket{
-      height: 40px;
-      padding: 0;
+    .btnLarge{
+      display: none;
     }
+
 
     .mobile-menu {
       transform: translateX(0%);
       opacity: 1;
-      
     }
   
     .nav-links ul {
       display: flex;
       flex-direction: column;
       align-items: center;
-      ;
     }
   
     .navbar .nav-links ul li {

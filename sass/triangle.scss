@@ -1,0 +1,113 @@
+.firstEffect {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 30vw solid transparent;
+    border-right: 40vw solid transparent;
+    border-top: 40vw solid $secondary; 
+    position: absolute;
+    top: 19%;
+    left: 26%;
+    z-index: 2;
+  }
+  .triangle-shadow {
+    width: 0;
+    height: 0;
+    border-bottom: 30vw solid transparent;
+    border-right: 40vw solid transparent;
+    border-top: 40vw solid $primary; 
+    position: absolute;
+    top: 19%;
+    left: 30%;
+  }
+  
+  .effect-title {
+    text-transform: uppercase;
+    color: $tertiary;
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    font-size: 9vw;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    text-align: start;
+    animation: slide-in 2s forwards;
+    z-index: 3;
+    overflow: hidden;
+  }
+  
+  .effect-title .subtxt {
+    font-size: 5vw;
+    position: relative;
+    animation: slide-in 2s forwards;
+  }
+
+.subtxt{
+    margin-left: 29px;
+}
+  
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-5%);
+    }
+  }
+
+  @media #{$medium}{
+    .triangle{
+        left: 18%;
+    }
+    .triangle-shadow{
+        left: 22%;
+    }
+    .effect-title {
+        left: 16%;
+    }
+    .subtxt {
+        margin-left: 20px;
+        font-size: 4vw;
+    }
+  }
+  
+  @media #{$small}{
+      .effect-title {
+      font-size: 8vw;
+      left: 9%;
+      top: 38%;
+    }
+    .triangle{
+        left: 11%;
+        top: 34%;
+    }
+    .triangle-shadow{
+        left: 17%;
+        top: 34%;
+    }
+  
+    .effect-title .subtxt {
+      font-size: 4vw;
+    }
+
+    .subtxt{
+        margin-left: 10px;
+    }
+  }

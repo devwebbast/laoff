@@ -2,39 +2,54 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Découvrez les soirées techno incontournables dans notre restaurant avec rooftop. Profitez d'une ambiance électrisante, dégustez nos délicieux tapas et cocktails exquis. Laissez-vous emporter par la musique entraînante des meilleurs DJ. Réservez dès maintenant pour vivre des expériences nocturnes mémorables.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="/CSS/style.css" />
+    <link rel="stylesheet"  href="/CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,400;0,500;0,600;0,700;1,800&family=Barlow:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,200;0,400;0,500;0,600;0,700;1,800&amp;family=Barlow:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>La OFF - Ready To Share - Ready To Dance</title>
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html"class="logo"><img src="/images/logo-t.png"></a>
+        <a href="index.html" class="logo"><img src="/images/icon/logo.png" alt="image logo"></a>
         <div class="nav-links">
+            <a href="#takeTicket" class="btn btnFirst">Prends tes billets</a>
+            <div class="line-nav"></div>
             <ul> 
                 <li><a href="#lineUp" class="link">Line UP</a></li>
                 <li><a href="#placeParty" class="link">L'octave</a></li>
                 <li><a href="#about" class="link">La Off</a></li>
                 <li><a href="#faq" class="link">Infos pratiques</a></li>
-                <div class="line-nav"></div>
+                <li><a href="#takeTicket" class="btn btnLarge">Prends tes billets</a></li>
             </ul>
             <div class="line-nav"></div>
-            <div><a href="#takeTicket" class="btnTicket1"><button class="btn btnTicket">Prends ton billet</button></a></div>
         </div>
-        <img src="images/bars-solid.svg" alt="icone menu image" class="menu-hamburger">
+        <img src="images/icon/bars-solid.svg" alt="icone menu image" class="menu-hamburger">
         <div class="langChoice">
             <button type="button">EN/FR</button>
         </div>
     </nav>
-    <header>
-    </header>
+    <header class="firstEffect">
+        <div class="image-container">
+          <img src="/images/icon/bannerimg.jpg" alt="Banner Image">
+          <div class="triangle"></div>
+          <div class="triangle-shadow"></div>
+          <div class="effect-title">
+            <!-- Modifiable -->
+            <p>All of us</p>
+            <p>L'Octave</p>
+            <p>02 Juin</p>
+            <p class="subtxt">19h-21h30</p>
+            <!--  Fin modifiable -->
+          </div>
+        </div>
+      </header>
     <main>
         <div class="banner">
-            <img src="/images/bannerimg.jpg">
             <div class="banner-content">
                 <div class="timer">
                     <div class="timer-element timer-style">
@@ -50,7 +65,7 @@
                        <span id="secondes">00</span> secondes
                     </div>
                 </div>
-                <button class="btn"><a href="#takeTicket">Prends ton billet</a></button>
+                <a class="btn" href="#takeTicket">Prends tes billets</a>
             </div>    
         </div>
         <section class="lineUp" id="lineUp">
@@ -58,19 +73,27 @@
             <h1>Line Up</h1>
             <div class="lineup-container">
                 <div class="lineup-img">
-                    <img src="images/img1.png">
+                    <!-- Les images sont modifiables, à aller chercher dans le dossier images => artistes -->
+                    <img src="images/artistes/artiste1.png" alt="image premier artiste">
+                    <!-- Nom de l'artiste modifiable -->
                     <h4>DISTILLED NOISE</h4>
                 </div>
                 <div class="lineup-img">
-                    <img src="images/img2.png">
+                    <!-- Les images sont modifiables, à aller chercher dans le dossier images => artistes -->
+                    <img src="images/artistes/artiste2.png" alt="image deuxieme artiste">
+                    <!-- Nom de l'artiste modifiable -->
                     <h4>LEGRI</h4>
                 </div>
                 <div class="lineup-img">
-                    <img src="images/img3.png">
+                    <!-- Les images sont modifiables, à aller chercher dans le dossier images => artistes -->
+                    <img src="images/artistes/artiste3.png" alt="image troisieme artiste">
+                    <!-- Nom de l'artiste modifiable -->
                     <h4>CERTET</h4>
                 </div>
                 <div class="lineup-img">
-                    <img src="images/img4.png">
+                    <!-- Les images sont modifiables, à aller chercher dans le dossier images => artistes -->
+                    <img src="images/artistes/artiste4.png" alt="image quatrieme artiste">
+                    <!-- Nom de l'artiste modifiable -->
                     <h4>ARTUR</h4>
                 </div>
             </div>
@@ -80,11 +103,13 @@
             <h1>L'Octave</h1>
             <div class="place-container">
                 <div class="place-img">
-                    <img src="/images/octave.jpg">
+                    <img src="/images/icon/octave.jpg" alt="image octave">
                 </div>
                 <div class="place-description">
+                    <!-- Titre et texte modifiable -->
                     <h4>TAPAS - LIVE MUSIC - ROOFTOP</h4>
                     <p>LA OFF reprend possession de L'Octave, situé à 2 pas de la place Garibaldi. Système son pensé pour l'évènement, drinks et tapas à partager.</p>
+                    <!-- Fin du modifiable -->
                 </div>
             </div>
         </section>
@@ -99,10 +124,12 @@
                     </h3>
                 </div>
                 <div class="about-description">
+                    <!-- Les textes sont modifiables -->
                     <div><p>Depuis 2021, LA OFF est une association musicale à but non lucratif qui organise des évènements sur la Côte d’Azur.</p></div><br>
                     <div><p>Notre ambition : vous faire partager notre passion pour la musique House et Minimal grâce à des artistes locaux et internationaux aux styles musicaux éclectiques. </p></div> <br>             
                     <div><p><span>LA OFF</span></p></div>
-                    <button class="btn"><a href="#takeTicket">Prends ton billet</a></button>   
+                    <!-- Fin du modifiable -->
+                    <a href="#takeTicket" class="btn btnAbout">Prends tes billets</a> 
                 </div>
             </div>
         </section>
@@ -112,26 +139,34 @@
             <div class="container-faq">
                 <div class="accordion">
                     <div class="accordion-item">
+                        <!-- Question modifiable -->  
                       <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Comment se rendre à L’Octave ?</span><span class="icon" aria-hidden="true"></span></button>
                       <div class="accordion-content">
+                        <!-- Réponse modifiable -->
                         <p>64 boulevard Risso, 06300 Nice Arrêts de tram : Garibaldi ou Garibaldi / Le Château.</p>
                       </div>
                     </div>
                     <div class="accordion-item">
+                        <!-- Question modifiable --> 
                       <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Y a-t-il des places de stationnement ?</span><span class="icon" aria-hidden="true"></span></button>
                       <div class="accordion-content">
+                        <!-- Réponse modifiable -->
                         <p>Le parking "Promenade des Arts" se trouve à 2 minutes à pied de L'Octave.</p>
                       </div>
                     </div>
                     <div class="accordion-item">
+                        <!-- Question modifiable --> 
                       <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Y a-t-il un vestiaire ?</span><span class="icon" aria-hidden="true"></span></button>
                       <div class="accordion-content">
+                        <!-- Réponse modifiable -->
                         <p>Non, il n'y a pas de vestiaire.</p>
                       </div>
                     </div>
                     <div class="accordion-item">
+                        <!-- Question modifiable --> 
                       <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Peut-on acheter son billet sur place ?</span><span class="icon" aria-hidden="true"></span></button>
                       <div class="accordion-content">
+                        <!-- Réponse modifiable -->
                         <p>On te conseille de prendre ta prévente pour être sûr d'avoir une place ! Sinon pour les étudiants, c'est 9€ (sous présentation d'un justificatif à l'entrée), les regulars sont à 13€ et sur place, ça sera 15€.</p>
                       </div>
                     </div>
@@ -141,11 +176,12 @@
         <section class="ticketing" id="takeTicket">
             <div class="line"></div>
             <h1>Billeterie</h1>
+            <!-- Widget WeezEvent -->
             <div class="widgetEvent">
                 <a title="Logiciel billetterie en ligne"
                 href="https://weezevent.com/?c=sys_widget"
                 class="weezevent-widget-integration"
-                data-src="https://widget.weezevent.com/ticket/E979230/?code=17498&locale=fr-FR&width_auto=1&color_primary=f91e53"
+                data-src="https://widget.weezevent.com/ticket/E979230/?code=17498&amp;locale=fr-FR&width_auto=1&amp;color_primary=f91e53"
                 data-width="650"
                 data-height="600"
                 data-id="979230"
@@ -155,14 +191,14 @@
                 data-use-container="yes"
                 data-type="neo"
                 target="_blank">Billetterie Weezevent</a>
-                <script type="text/javascript" src="https://widget.weezevent.com/weez.js"></script>
+                <script src="https://widget.weezevent.com/weez.js"></script>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="footer-logo">
             <a href="index.html" class="logo">
-                <img src="/images/logo-t.png">
+                <img src="/images/icon/logo.png" alt="image logo">
             </a>
         </div>
         <div class="copyRight">
@@ -170,10 +206,10 @@
         </div>
         <div class="socialNetworks">
             <div>
-                <a href="https://www.youtube.com/@la_off" target="_blank"><i class="fa fa-youtube"></i></a>
-                <a href="https://www.instagram.com/laoff_event/" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://soundcloud.com/user-307170028" target="_blank"><i class="fa fa-soundcloud"></i></a>
-                <a href="https://www.facebook.com/LaOFFevent" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@la_off" target="_blank" aria-label="Youtube"><i class="fa fa-youtube"></i></a>
+                <a href="https://www.instagram.com/laoff_event/" target="_blank" aria-label="Instagram""><i class="fa fa-instagram"></i></a>
+                <a href="https://soundcloud.com/user-307170028" target="_blank" aria-label="Soundcloud"><i class="fa fa-soundcloud"></i></a>
+                <a href="https://www.facebook.com/LaOFFevent" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
             </div>
         </div>
         <div class="mentions">
